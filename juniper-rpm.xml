@@ -1,0 +1,64 @@
+<interface>
+        <name>Juniper RPM</name>
+        <description>Queries a Juniper Router for RPM.</description>
+        <script_path>/usr/bin/perl |path_cacti|/scripts/juniper-rpm.pl</script_path>
+        <arg_index>index</arg_index>
+        <arg_query>query</arg_query>
+        <arg_get>get</arg_get>
+        <arg_prepend>|host_hostname| |host_snmp_community|</arg_prepend>
+        <arg_num_indexes>num_indexes</arg_num_indexes>
+        <output_delimeter>:</output_delimeter>
+        <index_order>ownertest</index_order>
+        <index_order_type>alphabetic</index_order_type>
+        <index_title_format>|chosen_order_field|</index_title_format>
+
+        <fields>
+		<ownertest>
+			<name>Owner Test</name>
+			<direction>input</direction>
+			<query_name>query</query_name>
+                </ownertest>
+                <averagertt>
+                        <name>Average RTT</name>
+                        <direction>output</direction>
+			<query_name>average</query_name>
+		</averagertt>
+                <minrtt>
+                        <name>Minimum RTT</name>
+                        <direction>output</direction>
+                        <query_name>minrtt</query_name>
+                </minrtt>
+                <maxrtt>
+                        <name>Maximum RTT</name>
+                        <direction>output</direction>
+                        <query_name>maxrtt</query_name>
+                </maxrtt>
+                <stddev>
+                        <name>Standard Deviation</name>
+                        <direction>output</direction>
+                        <query_name>stddev</query_name>
+                </stddev>
+                <jitter>
+                        <name>Jitter</name>
+                        <direction>output</direction>
+			<query_name>jitter</query_name>
+		</jitter>
+                <loss>
+                        <name>Packet Loss Pctg</name>
+                        <direction>output</direction>
+                        <query_name>loss</query_name>
+                </loss>
+                <probesent>
+                        <name>Num Probes Sent</name>
+                        <direction>output</direction>
+                        <query_name>probesent</query_name>
+                </probesent>
+                <probercvd>
+                        <name>Num Probes Rcvd</name>
+                        <direction>output</direction>
+                        <query_name>probercvd</query_name>
+                </probercvd>
+
+
+        </fields>
+</interface>
